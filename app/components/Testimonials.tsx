@@ -67,7 +67,7 @@ export default function Testimonials() {
           </div>
         </div>
       </div>
-      <div className="row-start-2 col-span-4 col-start-2 col-end-6 grid grid-cols-3 pt-16 border-t-2">
+      <div className="row-start-2 col-span-4 col-start-2 col-end-6 grid grid-cols-3 pt-16 border-t-2 gap-x-5">
         <div className="flex items-start gap-x-4">
           <div className="bg-[#EEF7FF] p-2">
             <Image

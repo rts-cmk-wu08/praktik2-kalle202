@@ -1,6 +1,5 @@
 import { HomeType } from "@/types/hometype";
 import Image from "next/image";
-import BgColor from "./bgColor";
 
 export default function BoligCard({
   adress1,
@@ -37,10 +36,25 @@ export default function BoligCard({
           </span>
         </p>
         <div className="flex justify-between border-t-2 pt-2 items-center">
-          <p>
-            <BgColor energylabel={energylabel} /> {rooms} &#x2022; {livingspace}{" "}
-            m&sup2;
-          </p>
+          <div className={`flex items-center justify-between`}>
+            <p
+              className={`${
+                energylabel === "A"
+                  ? "bg-[#10AC84]"
+                  : energylabel === "B"
+                  ? "bg-[#F2C94C]"
+                  : energylabel === "C"
+                  ? "bg-[#F2994A]"
+                  : "bg-[#EB5757]"
+              } w-6 text-white text-center mr-5`}
+            >
+              {energylabel}
+            </p>
+            <p>
+              {rooms} &#x2022; {livingspace} m&sup2;
+            </p>
+          </div>
+
           <p className="font-bold">Kr. {price}</p>
         </div>
       </div>

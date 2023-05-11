@@ -8,7 +8,7 @@ export default function HomeBanner() {
       <Image
         src={landingBanner}
         alt="homepage banner"
-        className="row-span-full col-span-full"
+        className="row-span-full col-span-full w-full"
       />
       <div className="row-span-full col-span-full">
         <h1 className="text-white row-span-full col-span-full text-4xl font-bold">

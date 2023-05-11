@@ -19,13 +19,15 @@ export default async function UdvalgteBoliger() {
   const homes = await getHomes();
   console.log(homes[0]);
   return (
-    <div className="grid bg-gray-100 grid-cols-6">
-      <h2 className="col-span-full justify-self-center">Udvalgte Boliger</h2>
-      <p className="col-span-full justify-self-center">
+    <div className="grid bg-gray-100 grid-cols-6 pt-16">
+      <h2 className="col-span-full justify-self-center text-4xl font-bold text-[#263048] py-4">
+        Udvalgte Boliger
+      </h2>
+      <p className="col-span-full justify-self-center text-center py-4">
         There are many variations of passages of Lorem Ipsum available but the
-        this in majority have suffered alteration in some
+        this in <br></br> majority have suffered alteration in some
       </p>
-      <div className="grid grid-cols-2 col-span-4 col-start-2 justify-self-center gap-8">
+      <div className="grid grid-cols-2 col-span-4 col-start-2 justify-self-center gap-8 py-8">
         {homes.slice(0, 4).map((home: HomeType) => (
           <BoligCard
             {...home}
