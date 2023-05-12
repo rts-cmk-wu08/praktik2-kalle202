@@ -1,5 +1,7 @@
 import { HomeType } from "@/types/hometype";
 import Image from "next/image";
+import formatPrice from "@/util/formatPrice";
+import Link from "next/link";
 
 export default function BoligCard({
   adress1,
@@ -15,7 +17,10 @@ export default function BoligCard({
   energylabel,
 }: HomeType) {
   return (
-    <div className="bg-white">
+    <Link
+      href={`bolig/${id}`}
+      className="bg-white"
+    >
       <Image
         className="object-cover h-48 w-96"
         src={images[0].url}
@@ -32,7 +37,7 @@ export default function BoligCard({
           {type} &#x2022;
           <span className="font-normal text-sm">
             {" "}
-            Ejerudgift: {payment} kr.
+            Ejerudgift: {formatPrice(payment)}
           </span>
         </p>
         <div className="flex justify-between border-t-2 pt-2 items-center">
@@ -55,9 +60,9 @@ export default function BoligCard({
             </p>
           </div>
 
-          <p className="font-bold">Kr. {price}</p>
+          <p className="font-bold">{formatPrice(price)}</p>
         </div>
       </div>
-    </div>
+    </Link>
   );
 }
