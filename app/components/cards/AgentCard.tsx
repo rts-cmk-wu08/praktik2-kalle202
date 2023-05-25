@@ -14,16 +14,20 @@ export default function BoligCard({
 }: AgentType) {
   return (
     <div className="bg-white">
-      <Image
-        className="object-cover h-auto w-96"
-        src={image.url}
-        alt={name}
-        width={200}
-        height={200}
-      />
+      <Link href={`maegler/${id}`}>
+        <Image
+          className="object-cover h-auto w-96"
+          src={image.url}
+          alt={name}
+          width={200}
+          height={200}
+        />
+      </Link>
       <div className="p-5 flex flex-col gap-y-2 text-center">
-        <h3 className="font-bold text-lg">{name}</h3>
-        <p className="text-sm text-gray-400">{title}</p>
+        <Link href={`maegler/${id}`}>
+          <h3 className="font-bold text-lg">{name}</h3>
+          <p className="text-sm text-gray-400">{title}</p>
+        </Link>
         <div className="flex justify-center gap-2">
           <Link href={`mailto:${email}`}>
             <HiMail />

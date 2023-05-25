@@ -21,7 +21,7 @@ export default async function page() {
   const homes = await getHomes();
   return (
     <>
-      <Banner />
+      <Banner text="Boliger til salg" />
       <div className="grid bg-gray-100 grid-cols-6 py-16">
         <h2 className="col-span-full justify-self-center text-4xl font-bold text-[#263048] py-4">
           SEARCH PLACEHOLDER

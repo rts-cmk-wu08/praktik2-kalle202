@@ -16,16 +16,16 @@ export default function Nav() {
       </Link>
       <ul className="col-start-4 col-end-6 flex justify-between items-center">
         <li>
-          <Link href="">Boliger til salg</Link>
+          <Link href="/bolig">Boliger til salg</Link>
         </li>
         <li>
-          <Link href="">Mæglere</Link>
+          <Link href="/maegler">Mæglere</Link>
         </li>
         <li>
           <Link href="">Mine favoritter</Link>
         </li>
         <li>
-          <Link href="">Kontakt os</Link>
+          <Link href="/kontakt">Kontakt os</Link>
         </li>
       </ul>
     </nav>

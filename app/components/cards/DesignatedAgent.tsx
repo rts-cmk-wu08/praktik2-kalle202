@@ -1,5 +1,6 @@
 import { AgentType } from "@/types/agenttype";
 import Image from "next/image";
+import Link from "next/link";
 import {
   FaInstagram,
   FaLinkedinIn,
@@ -19,13 +20,17 @@ export default function DesignatedAgent({
   return (
     <section className="flex p-8 border-2 max-w-2xl gap-8">
       <div className="grid grid-cols-1">
-        <Image
-          src={image.url}
-          height={300}
-          width={300}
-          alt={name}
+        <Link
           className="col-span-full row-span-full"
-        />
+          href={`/maegler/${id}`}
+        >
+          <Image
+            src={image.url}
+            height={300}
+            width={300}
+            alt={name}
+          />
+        </Link>
         <div className="mt-16 self-center bg-[#162A41] flex col-span-full row-span-full text-2xl h-8 w-24 items-center justify-around">
           <FaInstagram className="fill-white" />
           <FaLinkedinIn className="fill-white" />
@@ -34,7 +39,12 @@ export default function DesignatedAgent({
       </div>
       <div className="flex text-lg flex-col gap-y-5">
         <div className="border-b-2 pb-4">
-          <h3 className="font-bold text-xl">{name}</h3>
+          <Link
+            className=""
+            href={`/maegler/${id}`}
+          >
+            <h3 className="font-bold text-xl">{name}</h3>
+          </Link>
           <p className="text-md text-gray-400">{title}</p>
         </div>
         <div>
