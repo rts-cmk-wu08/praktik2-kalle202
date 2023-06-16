@@ -1,5 +1,3 @@
-"use client";
-
 import HeaderBanner from "./components/banners/HeaderBanner";
 import Footer from "./components/Footer";
 import Nav from "./components/Nav";
