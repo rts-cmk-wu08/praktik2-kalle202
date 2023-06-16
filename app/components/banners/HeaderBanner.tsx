@@ -1,6 +1,5 @@
 import { FaPaperPlane, FaPhone, FaUser } from "react-icons/fa";
 import Link from "next/link";
-import { signIn, signOut } from "next-auth/react";
 
 export default function HeaderBanner() {
   return (
@@ -33,10 +32,7 @@ export default function HeaderBanner() {
           </button>
         </> */}
 
-        <button
-          onClick={() => signIn("google")}
-          className="flex items-center"
-        >
+        <button className="flex items-center">
           <FaUser className="m-2" />
           Log ind
         </button>
