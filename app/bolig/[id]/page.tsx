@@ -1,6 +1,8 @@
+"use client";
+
+import * as React from "react";
 import Slider from "@/app/components/Slider";
 import { SearchParamsType } from "@/types/SearchParamsTypes";
-import { HomeType } from "@/types/hometype";
 import Image from "next/image";
 import formatPrice from "@/util/formatPrice";
 import imageicon from "public/icons/homedetails/imageicon.svg";

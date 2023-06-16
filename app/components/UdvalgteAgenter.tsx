@@ -38,7 +38,7 @@ export default async function UdvalgteBoliger() {
       </div>
       <Link
         className="col-span-full justify-self-center text-center bg-[#162A41] text-white py-4 px-6 rounded"
-        href="/boliger"
+        href="/maegler"
       >
         Se alle mæglere
       </Link>
